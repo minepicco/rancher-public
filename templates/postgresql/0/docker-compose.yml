@@ -7,5 +7,5 @@ PostgreSQLServer:
   labels:
     io.rancher.container.pull_image: always
   tty: true
-  image: postgres
+  image: postgres:latest
   stdin_open: true
