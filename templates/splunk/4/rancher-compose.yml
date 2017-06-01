@@ -15,12 +15,6 @@
       required: true
       default: "8088"
       type: "int"
-    - variable: splunk_services
-      description: "Splunk service ports (default: 8089)"
-      label: "Splunk Services"
-      required: true
-      default: "8089"
-      type: "int"
     - variable: application_key_value_store
       description: "Application Key Value Store ports (default: 8191)"
       label: "Application Key Value Store"
