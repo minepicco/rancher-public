@@ -7,9 +7,9 @@ Splunk:
   - ${splunk_receiving_port}:9997/tcp
   environment:
     SPLUNK_START_ARGS: --accept-license --answer-yes
-    SPLUNK_ENABLE_LISTEN: 8088
     SPLUNK_ENABLE_LISTEN: 9997
     SPLUNK_ADD: tcp 1514
+    SPLUNK_ADD: tcp 8088
     SPLUNK_USER: root
   log_driver: json-file
   labels:
