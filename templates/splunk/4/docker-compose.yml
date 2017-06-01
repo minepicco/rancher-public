@@ -9,7 +9,6 @@ Splunk:
     SPLUNK_START_ARGS: --accept-license --answer-yes
     SPLUNK_ENABLE_LISTEN: 9997
     SPLUNK_ADD: tcp 1514
-    SPLUNK_ADD: tcp 8088
     SPLUNK_USER: root
   labels:
     io.rancher.container.pull_image: always
@@ -19,7 +18,7 @@ Splunk:
   - /sbin/entrypoint.sh
   command:
   - start-service
-  image: splunk/splunk:latest
+  image: splunk/splunk:6.5.3-monitor
   volumes:
   - /opt/splunk/etc
   - /opt/splunk/var
