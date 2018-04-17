@@ -1,5 +1,5 @@
 redmine:
-  image: redmine
+  image: redmine:latest
   restart: always
   ports:
     - ${http_port}:3000
