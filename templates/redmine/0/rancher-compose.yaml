@@ -2,7 +2,6 @@
   name: "Redmine"
   version: "latest"
   description: "Redmine with database"
-  uuid: WordPress-0
   questions:
     - variable: http_port
       description: "public port to access the Redmine system"
