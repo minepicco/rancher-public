@@ -1,0 +1,7 @@
+name: "Redmine"
+description: "Redmineです。"
+version: "latest"
+category: "プロジェクト管理"
+maintainer: 
+license: 
+projectURL: "https://hub.docker.com/_/redmine/"
