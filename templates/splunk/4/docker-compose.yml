@@ -1,0 +1,26 @@
+Splunk:
+  ports:
+  - ${public_port}:8000/tcp
+  - ${network_input}:1514/tcp
+  - ${http_event_controller}:8088/tcp
+  - ${application_key_value_store}:8191/tcp
+  - ${splunk_receiving_port}:9997/tcp
+  environment:
+    SPLUNK_START_ARGS: --accept-license --answer-yes
+    SPLUNK_ENABLE_LISTEN: 9997
+    SPLUNK_ADD: tcp 1514
+    SPLUNK_USER: root
+  labels:
+    io.rancher.container.pull_image: always
+    io.rancher.container.start_once: 'true'
+    io.rancher.container.volume_cleanup_strategy: none
+  entrypoint:
+  - /sbin/entrypoint.sh
+  command:
+  - start-service
+  image: splunk/splunk:6.5.3-monitor
+  volumes:
+  - /opt/splunk/etc
+  - /opt/splunk/var
+  working_dir: /opt/splunk
+  net: bridge

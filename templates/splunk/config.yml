@@ -1,6 +1,6 @@
 name: "Splunk"
 description: "ライセンスは入っていません。ちょっとしたログファイルの解析のときなど、使い捨てでどうぞ。"
-version: "6.5.2"
+version: "6.6.0"
 category: "Log Analytics"
 maintainer: 
 license:  
